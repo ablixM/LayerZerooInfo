@@ -1,0 +1,97 @@
+body{
+    font-family: Source Code Pro;
+}
+
+.navbar-brand span{
+    font-size: small;
+   
+}
+.offcanvas-title span{
+    font-size: small;
+
+}
+
+
+.dropdown-item:hover{
+    background-color: white;
+
+}
+
+
+.dropdown-item {
+    padding-bottom: 1px;
+    color: rgb(0, 0, 0);
+    position: relative;
+}
+
+.dropdown-item::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    transform: translateY(3px);
+    background: rgb(2, 2, 2);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.dropdown-item:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+
+.dropdown-menu{
+    position: absolute;
+    right: 10px;
+    
+
+}
+.dropdown-menu ul{
+    list-style: none;
+    padding: 0;
+}
+
+
+.dropdown-menu li a{
+    color: grey;
+    padding: 10px 20px;
+}
+
+.dropdown-menu #one li a{
+    color: black;
+    width: 100%;
+}
+
+
+.dropdown-menu #two li:first-child a{
+    font-size: 1em;
+    font-weight: 500;
+    color: black;
+}
+
+
+
+@media(min-width: 993px){
+
+    .dropdown-menu.show{
+        display: flex;
+    }
+
+    .dropdown:hover .dropdown-menu{
+        display: flex;
+    }
+}
+
+@media(max-width: 993px){
+    .dropdown-menu.show{
+        max-height: 60vh;
+        overflow-y: scroll;
+    }
+}
